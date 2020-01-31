@@ -15,7 +15,7 @@ def first_batch():
     driver = webdriver.Chrome()
     driver.get(
         'https://www.investing.com/stock-screener/?sp=country::6|sector::a|industry::a|equityType::a|RSI::0,45|yield_us::2.5,2569.1%3Ceq_market_cap;1')
-    webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform() #click escape key
+    driver.implicitly_wait(1)  # wait for 1 sec
     urls = driver.find_elements_by_xpath("//a[@target='_blank']") # pass all clickable links to array
 
     for element in urls[:10]:
@@ -28,7 +28,7 @@ def second_batch():
     driver = webdriver.Chrome()
     driver.get(
         'https://www.investing.com/stock-screener/?sp=country::6|sector::a|industry::a|equityType::a|RSI::0,45|yield_us::2.5,2569.1%3Ceq_market_cap;1')
-    webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()
+    driver.implicitly_wait(1)  # wait for 1 sec
     urls = driver.find_elements_by_xpath("//a[@target='_blank']")
 
     for element in urls[10:20]:
@@ -41,7 +41,7 @@ def third_batch():
     driver = webdriver.Chrome()
     driver.get(
         'https://www.investing.com/stock-screener/?sp=country::6|sector::a|industry::a|equityType::a|RSI::0,45|yield_us::2.5,2569.1%3Ceq_market_cap;1')
-    webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()
+    driver.implicitly_wait(1)  # wait for 1 sec
     urls = driver.find_elements_by_xpath("//a[@target='_blank']")
 
     for element in urls[20:30]:
@@ -54,7 +54,7 @@ def fouth_batch():
     driver = webdriver.Chrome()
     driver.get(
         'https://www.investing.com/stock-screener/?sp=country::6|sector::a|industry::a|equityType::a|RSI::0,45|yield_us::2.5,2569.1%3Ceq_market_cap;1')
-    webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()
+    driver.implicitly_wait(1)  # wait for 1 sec
     urls = driver.find_elements_by_xpath("//a[@target='_blank']")
 
     for element in urls[30:40]:
@@ -68,7 +68,7 @@ def fifth_batch():
     driver = webdriver.Chrome()
     driver.get(
         'https://www.investing.com/stock-screener/?sp=country::6|sector::a|industry::a|equityType::a|RSI::0,45|yield_us::2.5,2569.1%3Ceq_market_cap;1')
-    webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()
+    driver.implicitly_wait(1)  # wait for 1 sec
     urls = driver.find_elements_by_xpath("//a[@target='_blank']")
 
     for element in urls[40:50]:
