@@ -1,3 +1,0 @@
-([('main',
-   '/Users/boliu/PycharmProjects/Stock_Screener/dist/main',
-   'EXECUTABLE')],)

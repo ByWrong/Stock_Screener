@@ -14,7 +14,7 @@ from easygui import msgbox
 def first_batch():
     driver = webdriver.Chrome()
     driver.get(
-        'https://www.investing.com/stock-screener/?sp=country::6|sector::a|industry::a|equityType::a|RSI::0,45|yield_us::2.5,2569.1%3Ceq_market_cap;1')
+        'https://www.investing.com/stock-screener/?sp=country::6|sector::a|industry::a|equityType::a|RSI::0,40|yield_us::2.5,2569.1%3Ceq_market_cap;1')
     driver.implicitly_wait(5)
     webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()  # click escape key
     urls = driver.find_elements_by_xpath("//td/a[@target='_blank']")  # pass all clickable links to array
@@ -28,7 +28,7 @@ def first_batch():
 def second_batch():
     driver = webdriver.Chrome()
     driver.get(
-        'https://www.investing.com/stock-screener/?sp=country::6|sector::a|industry::a|equityType::a|RSI::0,45|yield_us::2.5,2569.1%3Ceq_market_cap;1')
+        'https://www.investing.com/stock-screener/?sp=country::6|sector::a|industry::a|equityType::a|RSI::0,40|yield_us::2.5,2569.1%3Ceq_market_cap;1')
     driver.implicitly_wait(5)
     webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()  # click escape key
     urls = driver.find_elements_by_xpath("//td/a[@target='_blank']")  # pass all clickable links to array
@@ -42,7 +42,7 @@ def second_batch():
 def third_batch():
     driver = webdriver.Chrome()
     driver.get(
-        'https://www.investing.com/stock-screener/?sp=country::6|sector::a|industry::a|equityType::a|RSI::0,45|yield_us::2.5,2569.1%3Ceq_market_cap;1')
+        'https://www.investing.com/stock-screener/?sp=country::6|sector::a|industry::a|equityType::a|RSI::0,40|yield_us::2.5,2569.1%3Ceq_market_cap;1')
     driver.implicitly_wait(5)
     webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()  # click escape key
     urls = driver.find_elements_by_xpath("//td/a[@target='_blank']")  # pass all clickable links to array
@@ -56,7 +56,7 @@ def third_batch():
 def fouth_batch():
     driver = webdriver.Chrome()
     driver.get(
-        'https://www.investing.com/stock-screener/?sp=country::6|sector::a|industry::a|equityType::a|RSI::0,45|yield_us::2.5,2569.1%3Ceq_market_cap;1')
+        'https://www.investing.com/stock-screener/?sp=country::6|sector::a|industry::a|equityType::a|RSI::0,40|yield_us::2.5,2569.1%3Ceq_market_cap;1')
     driver.implicitly_wait(5)
     webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()  # click escape key
     urls = driver.find_elements_by_xpath("//td/a[@target='_blank']")  # pass all clickable links to array
@@ -71,7 +71,7 @@ def fouth_batch():
 def fifth_batch():
     driver = webdriver.Chrome()
     driver.get(
-        'https://www.investing.com/stock-screener/?sp=country::6|sector::a|industry::a|equityType::a|RSI::0,45|yield_us::2.5,2569.1%3Ceq_market_cap;1')
+        'https://www.investing.com/stock-screener/?sp=country::6|sector::a|industry::a|equityType::a|RSI::0,40|yield_us::2.5,2569.1%3Ceq_market_cap;1')
     driver.implicitly_wait(5)
     webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()  # click escape key
     urls = driver.find_elements_by_xpath("//td/a[@target='_blank']")  # pass all clickable links to array
@@ -93,7 +93,7 @@ frame = LabelFrame(root, text='Good luck on your trades.', padx=10, pady=10, bg=
 frame.grid(padx=5, pady=5)
 # label
 theLabel = Label(frame,
-                 text='The stocks are ranked based on market caps.\nThe current screening parameters are: country = Canada | dividend yield > 2.5% | RSI < 45.',
+                 text='The stocks are ranked based on market caps.\nThe current screening parameters are: country = Canada | dividend yield > 2.5% | RSI < 40.',
                  padx=5, pady=5)
 theLabel.grid(row=0, padx=5, pady=5)
 # submit button
