@@ -1,13 +1,14 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-import ctypes
 from tkinter import *
+from easygui import msgbox
+# import ctypes
 
-def pop_up(title, text):
-    """
-    Create a pop up window function.
-    """
-    return ctypes.windll.user32.MessageBoxW(0, text, title, 0x1000)
+# def pop_up(title, text):
+#     """
+#     Create a pop up window function..
+#     """
+#     return ctypes.windll.user32.MessageBoxW(0, text, title, 0x1000)
 
 
 def first_batch():
@@ -20,7 +21,8 @@ def first_batch():
     for element in urls[:10]:
         webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()  # click escape key
         element.click()  # click element in array
-    pop_up('Message', 'Finished loading first 10 stocks')
+    # pop_up('Message', 'Finished loading first 10 stocks')
+    msgbox('Finished loading first 10 stocks.')
 
 
 def second_batch():
@@ -33,7 +35,8 @@ def second_batch():
     for element in urls[10:20]:
         webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()
         element.click()
-    pop_up('Message', 'Finished loading 11-20th stocks.')
+    # pop_up('Message', 'Finished loading 11-20th stocks.')
+    msgbox('Finished loading 11-20th stocks.')
 
 
 def third_batch():
@@ -46,7 +49,8 @@ def third_batch():
     for element in urls[20:30]:
         webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()
         element.click()
-    pop_up('Message', 'Finished loading 20-30th stocks.')
+    # pop_up('Message', 'Finished loading 20-30th stocks.')
+    msgbox('Finished loading 21-30th stocks.')
 
 
 def fouth_batch():
@@ -60,7 +64,8 @@ def fouth_batch():
         webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()
         element.click()
 
-    pop_up('Message', 'Finished loading 30-40th stocks.')
+    # pop_up('Message', 'Finished loading 30-40th stocks.')
+    msgbox('Finished loading 31-40th stocks.')
 
 
 def fifth_batch():
@@ -74,7 +79,8 @@ def fifth_batch():
         webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()
         element.click()
 
-    pop_up('Message', 'Finished loading 40-50th stocks.')
+    # pop_up('Message', 'Finished loading 40-50th stocks.')
+    msgbox('Finished loading 41-50th stocks.')
 
 
 # Code below are for UI generation.
