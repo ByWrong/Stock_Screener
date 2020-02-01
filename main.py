@@ -3,7 +3,6 @@ from selenium.webdriver.common.keys import Keys
 import ctypes
 from tkinter import *
 
-
 def pop_up(title, text):
     """
     Create a pop up window function.
@@ -15,12 +14,12 @@ def first_batch():
     driver = webdriver.Chrome()
     driver.get(
         'https://www.investing.com/stock-screener/?sp=country::6|sector::a|industry::a|equityType::a|RSI::0,45|yield_us::2.5,2569.1%3Ceq_market_cap;1')
-    driver.implicitly_wait(1)  # wait for 1 sec
-    urls = driver.find_elements_by_xpath("//a[@target='_blank']") # pass all clickable links to array
-
+    driver.implicitly_wait(5)
+    webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()  # click escape key
+    urls = driver.find_elements_by_xpath("//td/a[@target='_blank']")  # pass all clickable links to array
     for element in urls[:10]:
-        webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform() #click escape key
-        element.click() # click element in array
+        webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()  # click escape key
+        element.click()  # click element in array
     pop_up('Message', 'Finished loading first 10 stocks')
 
 
@@ -28,9 +27,9 @@ def second_batch():
     driver = webdriver.Chrome()
     driver.get(
         'https://www.investing.com/stock-screener/?sp=country::6|sector::a|industry::a|equityType::a|RSI::0,45|yield_us::2.5,2569.1%3Ceq_market_cap;1')
-    driver.implicitly_wait(1)  # wait for 1 sec
-    urls = driver.find_elements_by_xpath("//a[@target='_blank']")
-
+    driver.implicitly_wait(5)
+    webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()  # click escape key
+    urls = driver.find_elements_by_xpath("//td/a[@target='_blank']")  # pass all clickable links to array
     for element in urls[10:20]:
         webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()
         element.click()
@@ -41,9 +40,9 @@ def third_batch():
     driver = webdriver.Chrome()
     driver.get(
         'https://www.investing.com/stock-screener/?sp=country::6|sector::a|industry::a|equityType::a|RSI::0,45|yield_us::2.5,2569.1%3Ceq_market_cap;1')
-    driver.implicitly_wait(1)  # wait for 1 sec
-    urls = driver.find_elements_by_xpath("//a[@target='_blank']")
-
+    driver.implicitly_wait(5)
+    webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()  # click escape key
+    urls = driver.find_elements_by_xpath("//td/a[@target='_blank']")  # pass all clickable links to array
     for element in urls[20:30]:
         webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()
         element.click()
@@ -54,9 +53,9 @@ def fouth_batch():
     driver = webdriver.Chrome()
     driver.get(
         'https://www.investing.com/stock-screener/?sp=country::6|sector::a|industry::a|equityType::a|RSI::0,45|yield_us::2.5,2569.1%3Ceq_market_cap;1')
-    driver.implicitly_wait(1)  # wait for 1 sec
-    urls = driver.find_elements_by_xpath("//a[@target='_blank']")
-
+    driver.implicitly_wait(5)
+    webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()  # click escape key
+    urls = driver.find_elements_by_xpath("//td/a[@target='_blank']")  # pass all clickable links to array
     for element in urls[30:40]:
         webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()
         element.click()
@@ -68,9 +67,9 @@ def fifth_batch():
     driver = webdriver.Chrome()
     driver.get(
         'https://www.investing.com/stock-screener/?sp=country::6|sector::a|industry::a|equityType::a|RSI::0,45|yield_us::2.5,2569.1%3Ceq_market_cap;1')
-    driver.implicitly_wait(1)  # wait for 1 sec
-    urls = driver.find_elements_by_xpath("//a[@target='_blank']")
-
+    driver.implicitly_wait(5)
+    webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()  # click escape key
+    urls = driver.find_elements_by_xpath("//td/a[@target='_blank']")  # pass all clickable links to array
     for element in urls[40:50]:
         webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()
         element.click()
@@ -85,7 +84,7 @@ root = Tk()
 root.title('Stocks Screener V.1.0.0')
 # create a container
 frame = LabelFrame(root, text='Good luck on your trades.', padx=10, pady=10, bg='pale green')
-frame.grid(padx=5,pady=5)
+frame.grid(padx=5, pady=5)
 # label
 theLabel = Label(frame,
                  text='The stocks are ranked based on market caps.\nThe current screening parameters are: country = Canada | dividend yield > 2.5% | RSI < 45.',
@@ -112,10 +111,5 @@ submit_button5 = Button(frame, text='Fetch 41-50th Stocks',
                         command=lambda: fifth_batch())
 submit_button5.grid(row=5, padx=5, pady=5)
 
-# label
-theLable2 = Label(frame,
-                 text='Copyright © 2020 by Byron Liu',
-                 padx=5, pady=5)
-theLable2.grid(row=8, padx=5, pady=5)
 
 root.mainloop()
