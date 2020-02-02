@@ -1,1 +1,1 @@
-- make sure the "chromedriver.exe" matches the version of your Chrome browser. If in doubt, download a new one from internet and replace.
+- make sure the "chromedriver" matches the version of your Chrome browser. If in doubt, download a new one from internet and replace.
