@@ -35,7 +35,7 @@ missing module named multiprocessing.BufferTooShort - imported by multiprocessin
 missing module named multiprocessing.AuthenticationError - imported by multiprocessing (top-level), multiprocessing.connection (top-level)
 missing module named asyncio.DefaultEventLoopPolicy - imported by asyncio (delayed, conditional), asyncio.events (delayed, conditional)
 missing module named org - imported by pickle (optional)
-missing module named nt - imported by os (delayed, conditional, optional), ntpath (optional), shutil (conditional), pathlib (conditional), ctypes (delayed, conditional)
+missing module named nt - imported by shutil (conditional), ntpath (optional), pathlib (conditional), ctypes (delayed, conditional), os (delayed, conditional, optional)
 missing module named 'multiprocessing.forking' - imported by /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/PyInstaller/loader/rthooks/pyi_rth_multiprocessing.py (optional)
 missing module named PIL - imported by easygui.boxes.utils (optional)
 missing module named tkFont - imported by easygui.boxes.utils (optional), easygui.boxes.text_box (optional), easygui.boxes.button_box (optional), easygui.boxes.diropen_box (optional), easygui.boxes.fileboxsetup (optional), easygui.boxes.filesave_box (optional), easygui.boxes.fillable_box (optional), easygui.boxes.choice_box (optional)
